@@ -1,3 +1,4 @@
+import PlantCareTips from "./PlantCareTips";
 import PlantSlider from "./PlantSlider";
 import TopRatedPlants from "./TopRatedPlants";
 
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
       <PlantSlider></PlantSlider>
       <TopRatedPlants></TopRatedPlants>
+      <PlantCareTips></PlantCareTips>
     </div>
   );
 };

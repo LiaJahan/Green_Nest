@@ -10,7 +10,8 @@ const TopRatedPlants = () => {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <div>
+    <section className=" mx-auto px-6 py-16">
       <h1 className="text-5xl text-green-800 font-bold text-center mb-12">
         Our Top Rated Plants
       </h1>
@@ -25,7 +26,7 @@ const TopRatedPlants = () => {
               <img
                 src={plant.image}
                 alt={plant.plantName}
-                className="h-full w-full object-cover"
+                className="h-full w-full p-5 rounded-2xl object-cover"
               />
             </figure>
 
@@ -51,7 +52,7 @@ const TopRatedPlants = () => {
           </div>
         ))}
       </div>
-    </section>
+    </section> </div>
   );
 };
 

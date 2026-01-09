@@ -6,7 +6,7 @@ const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(true);  
 
   return (
-    <div className="navbar bg-green-300 shadow-sm">
+    <div className="navbar bg-green-300 shadow-sm px-10 py-5">
       
       <div className="navbar-start">
         <div className="dropdown">
@@ -64,7 +64,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `px-3 py-1 ${isActive ? "!text-green-600" : "text-green-800"}`
+                `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`
               }
             >
               Home
@@ -74,7 +74,7 @@ const Navbar = () => {
             <NavLink
               to="/planet"
               className={({ isActive }) =>
-                `px-3 py-1 ${isActive ? "!text-green-600" : "text-green-800"}`
+                `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`
               }
             >
               Planets
@@ -84,7 +84,7 @@ const Navbar = () => {
             <NavLink
               to="/myprofile"
               className={({ isActive }) =>
-                `px-3 py-1 ${isActive ? "!text-green-600" : "text-green-800"}`
+                `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`
               }
             >
               My Profile
@@ -96,7 +96,7 @@ const Navbar = () => {
       
       <div className="navbar-end">
         <button onClick={() => setLoggedIn(!loggedIn)}
-          className="btn text-xl text-green-800 font-bold bg-amber-200 hover:bg-amber-300"
+          className="btn text-xl text-green-800 font-bold bg-gray-200 hover:bg-amber-300"
         >
           {loggedIn ? "Logged In" : "Logged Out"}
         </button>
