@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);      // Mobile menu
-  const [loggedIn, setLoggedIn] = useState(true);   // Button state
+  const [isOpen, setIsOpen] = useState(false);      
+  const [loggedIn, setLoggedIn] = useState(true);  
 
   return (
     <div className="navbar bg-green-300 shadow-sm">
-      {/* Navbar start */}
+      
       <div className="navbar-start">
         <div className="dropdown">
           <button
@@ -30,7 +30,7 @@ const Navbar = () => {
             </svg>
           </button>
 
-          {/* Mobile menu */}
+          
           {isOpen && (
             <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow text-green-800 font-bold">
               <li>
@@ -57,7 +57,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Desktop menu */}
+      
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-xl font-bold">
           <li>
@@ -93,10 +93,9 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Navbar end button */}
+      
       <div className="navbar-end">
-        <button
-          onClick={() => setLoggedIn(!loggedIn)}
+        <button onClick={() => setLoggedIn(!loggedIn)}
           className="btn text-xl text-green-800 font-bold bg-amber-200 hover:bg-amber-300"
         >
           {loggedIn ? "Logged In" : "Logged Out"}

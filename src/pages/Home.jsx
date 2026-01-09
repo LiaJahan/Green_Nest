@@ -1,11 +1,14 @@
-import React from 'react';
+import PlantSlider from "./PlantSlider";
+import TopRatedPlants from "./TopRatedPlants";
+
 
 const Home = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-        </div>
-    );
+  return (
+    <div>
+      <PlantSlider></PlantSlider>
+      <TopRatedPlants></TopRatedPlants>
+    </div>
+  );
 };
 
 export default Home;

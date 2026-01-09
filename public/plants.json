@@ -1,0 +1,98 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "image": "https://i.ibb.co/MxpCwjn4/one.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Monstera Deliciosa",
+    "category": "Indoor Decorative",
+    "price": 35,
+    "rating": 4.9,
+    "availableStock": 7,
+    "careLevel": "Medium",
+    "description": "A popular indoor plant with large, glossy leaves that adds a tropical feel.",
+    "image": "https://i.ibb.co/Ld1jP21M/two.png",
+    "providerName": "GreenNest Suppliers"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Peace Lily",
+    "category": "Flowering Plant",
+    "price": 22,
+    "rating": 4.7,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "An elegant flowering plant known for its air-purifying qualities.",
+    "image": "https://i.ibb.co/G46PKW4K/three.png",
+    "providerName": "EcoLeaf Market"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Aloe Vera",
+    "category": "Medicinal",
+    "price": 15,
+    "rating": 4.6,
+    "availableStock": 20,
+    "careLevel": "Easy",
+    "description": "A succulent plant famous for its soothing gel and minimal care needs.",
+    "image": "https://i.ibb.co/gLZPj6Vs/four.png",
+    "providerName": "NatureRoots"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Indoor Tree",
+    "price": 45,
+    "rating": 4.5,
+    "availableStock": 5,
+    "careLevel": "Hard",
+    "description": "A stylish indoor tree with large violin-shaped leaves.",
+    "image": "https://i.ibb.co/svHHCnyt/five.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 6,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 14,
+    "rating": 4.7,
+    "availableStock": 18,
+    "careLevel": "Easy",
+    "description": "A fast-growing plant that removes toxins and is safe for pets.",
+    "image": "https://i.ibb.co/hSkkV94/six.webp",
+    "providerName": "GreenNest Suppliers"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Rubber Plant",
+    "category": "Indoor Decorative",
+    "price": 28,
+    "rating": 4.6,
+    "availableStock": 9,
+    "careLevel": "Medium",
+    "description": "A low-maintenance plant with thick, glossy leaves that brighten interiors.",
+    "image": "https://i.ibb.co/PGv4cGZD/eight.jpg",
+    "providerName": "EcoLeaf Market"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Bamboo Palm",
+    "category": "Air Purifier",
+    "price": 30,
+    "rating": 4.8,
+    "availableStock": 6,
+    "careLevel": "Medium",
+    "description": "A graceful palm that improves air quality and adds a natural vibe.",
+    "image": "https://i.ibb.co/DD89QPV2/nine.webp",
+    "providerName": "NatureRoots"
+  }
+]
