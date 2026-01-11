@@ -1,3 +1,4 @@
+import OurExperts from "./OurExperts";
 import PlantCareTips from "./PlantCareTips";
 import PlantSlider from "./PlantSlider";
 import TopRatedPlants from "./TopRatedPlants";
@@ -5,10 +6,11 @@ import TopRatedPlants from "./TopRatedPlants";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-green-100">
       <PlantSlider></PlantSlider>
       <TopRatedPlants></TopRatedPlants>
       <PlantCareTips></PlantCareTips>
+      <OurExperts></OurExperts>
     </div>
   );
 };

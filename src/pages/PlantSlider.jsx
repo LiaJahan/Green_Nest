@@ -43,7 +43,7 @@ const PlantSlider = () => {
       pagination={{ clickable: true }}
       slidesPerView={1}
       loop={true}
-      className="w-full h-[70vh]"   // Slider height
+      className="w-full h-[70vh]"
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id} className="h-full">
@@ -51,10 +51,10 @@ const PlantSlider = () => {
             className="w-full h-full bg-cover bg-center relative"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            {/* Overlay */}
+            
             <div className="absolute inset-0 bg-black/40"></div>
 
-            {/* Content */}
+           
             <div className="relative z-10 flex h-full items-center justify-center text-center text-white px-6">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
