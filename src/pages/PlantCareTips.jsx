@@ -2,11 +2,15 @@ import React from 'react';
 
 const PlantCareTips = () => {
     return (
-        <div className='mx-auto max-w-full py-16'>
-            <h1 className='text-5xl text-green-800 font-bold text-center mb-12'>Happy Plants Start with the Right Care</h1>
-            <div className='flex justify-between items-center'>
-                <div><span className="text-rotate text-7xl leading-[2]">
-                <span className="justify-items-center">
+        <div className='mx-auto max-w-7xl py-16'>
+            <h1 className='text-3xl px-0 md:text-4xl lg:text-5xl px-4 text-green-800 font-bold text-center mb-12'>
+             Happy Plants Start with the Right Care</h1>
+
+            <div className='flex flex-col lg:flex-row justify-center gap-12'>
+                <div className="flex justify-center">
+                    
+                <span className="text-rotate text-xl md:text-2xl lg:text-4xl leading-[2]">
+                <span className="grid gap-3 text-center lg:text-left">
                     <span>🌿 Water Wisely</span>
                     <span>☀️ Provide the Right Light</span>
                     <span>🌱 Choose the Right Soil</span>
@@ -15,8 +19,8 @@ const PlantCareTips = () => {
                 </span>
         
             </span></div>
-            <div><span className="text-rotate text-7xl leading-[2]">
-                <span className="justify-items-center">
+            <div><span className="text-rotate text-xl md:text-2xl lg:text-4xl leading-[2]">
+                <span className="grid gap-3 text-center lg:text-left">
                     <span>🌡️ Keep a Stable Temperature</span>
                     <span>🌼 Fertilize When Needed</span>
                     <span>🪴 Re-pot When Necessary</span>
@@ -30,3 +34,5 @@ const PlantCareTips = () => {
 };
 
 export default PlantCareTips;
+
+     
