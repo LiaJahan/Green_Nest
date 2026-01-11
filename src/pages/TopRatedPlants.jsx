@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const TopRatedPlants = () => {
   const [plants, setPlants] = useState([]);
@@ -10,49 +11,34 @@ const TopRatedPlants = () => {
   }, []);
 
   return (
-    <div>
-    <section className=" mx-auto px-6 py-16">
-      <h1 className="text-5xl text-green-800 font-bold text-center mb-12">
+    <div className="max-w-7xl mx-auto py-16 px-4">
+      <h1 className="text-5xl text-green-800 font-bold text-center mb-10">
         Our Top Rated Plants
       </h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {plants.map((plant) => (
           <div
             key={plant.plantId}
-            className="card bg-base-100 shadow-lg hover:shadow-xl transition"
+            className="bg-base-200 rounded-lg shadow-md p-4 flex flex-col"
           >
-            <figure className="h-52">
-              <img
-                src={plant.image}
-                alt={plant.plantName}
-                className="h-full w-full p-5 rounded-2xl object-cover"
-              />
-            </figure>
-
-            <div className="card-body text-center">
-              <h2 className="card-title justify-center text-green-800">
-                {plant.plantName}
-              </h2>
-
-              <p className="text-lg font-semibold">
-                Price: ${plant.price}
-              </p>
-
-              <p className="text-yellow-600 font-medium">
-                ⭐ Rating: {plant.rating}
-              </p>
-
-              <div className="card-actions justify-center mt-4">
-                <button className="btn bg-green-700 text-white hover:bg-green-800">
-                  View Details
-                </button>
-              </div>
-            </div>
+            <img
+              src={plant.image}
+              alt={plant.plantName}
+              className="h-48 object-cover rounded-md mb-4"
+            />
+            <h2 className="font-bold text-lg">{plant.plantName}</h2>
+            <p>${plant.price}</p>
+            <p>{plant.rating} ⭐</p>
+            <Link
+              to={`/plant/${plant.plantId}`}
+              className="btn btn-green mt-auto"
+            >
+              View Details
+            </Link>
           </div>
         ))}
       </div>
-    </section> </div>
+    </div>
   );
 };
 

@@ -8,12 +8,17 @@ import "./index.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Planets from "./pages/Planets.jsx";
 import MyProfile from "./pages/MyProfile.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import PrivateRoute from "./routes/PrivateRoute.jsx";
+import PlantDetails from "./pages/PlantDetails.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, // Layout
+    element: <App />,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
@@ -25,14 +30,27 @@ const router = createBrowserRouter([
       },
       {
         path: "myprofile",
-        element: <MyProfile></MyProfile>,
+        element: <PrivateRoute>
+          <MyProfile></MyProfile>
+        </PrivateRoute>
       },
+      {
+  path: "plant/:id",
+  element: (
+    <PrivateRoute>
+      <PlantDetails></PlantDetails>
+    </PrivateRoute>
+  ),
+}
+
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

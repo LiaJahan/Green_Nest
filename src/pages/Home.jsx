@@ -1,3 +1,4 @@
+import DecorsIdea from "./DecorsIdea";
 import OurExperts from "./OurExperts";
 import PlantCareTips from "./PlantCareTips";
 import PlantSlider from "./PlantSlider";
@@ -11,6 +12,7 @@ const Home = () => {
       <TopRatedPlants></TopRatedPlants>
       <PlantCareTips></PlantCareTips>
       <OurExperts></OurExperts>
+      <DecorsIdea></DecorsIdea>
     </div>
   );
 };
