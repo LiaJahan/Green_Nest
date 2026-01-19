@@ -1,28 +1,65 @@
-// src/context/AuthContext.jsx
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import {
+  onAuthStateChanged,
+  signOut,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { auth } from "../firebase";
-import { onAuthStateChanged } from "firebase/auth";
 
-// Create context
 export const AuthContext = createContext();
 
+// Custom hook
+export const useAuth = () => useContext(AuthContext);
+
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null); // store logged-in user
-  const [loading, setLoading] = useState(true); // track if Firebase is checking
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Listen to user state changes
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
     });
-
-    return () => unsubscribe(); // cleanup listener
+    return unsubscribe;
   }, []);
 
+  const createUser = (email, password) =>
+    createUserWithEmailAndPassword(auth, email, password);
+
+  const loginUser = (email, password) =>
+    signInWithEmailAndPassword(auth, email, password);
+
+  const googleLogin = () => signInWithPopup(auth, new GoogleAuthProvider());
+
+  const updateUserProfile = (name, photo) =>
+    updateProfile(auth.currentUser, { displayName: name, photoURL: photo });
+
+  const logOut = () => signOut(auth);
+
   return (
-    <AuthContext.Provider value={{ user, loading }}>
-      {children}
-    </AuthContext.Provider>
+    // <AuthContext.Provider
+    //   value={{ user, createUser, loginUser, googleLogin, updateUserProfile, logOut }}
+    // >
+    //   {!loading && children}
+    // </AuthContext.Provider>
+
+    <AuthContext.Provider
+  value={{
+    user,
+    loading,
+    createUser,
+    loginUser,
+    googleLogin,
+    updateUserProfile,
+    logOut,
+  }}
+>
+  {!loading && children}
+</AuthContext.Provider>
+
   );
 };
