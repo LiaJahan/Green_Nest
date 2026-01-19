@@ -1,9 +1,11 @@
 import React from 'react';
+import TopRatedPlants from './TopRatedPlants';
 
 const Plants = () => {
     return (
         <div>
-            <h1>I am the Plants Details</h1>
+            <TopRatedPlants></TopRatedPlants>
+            
         </div>
     );
 };
