@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import Plants from "./pages/Plants.jsx";
@@ -10,7 +9,6 @@ import PlantDetails from "./pages/PlantDetails.jsx";
 import SignupPage from "./pages/SignupPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-
 import { AuthProvider } from "./context/AuthContext.jsx";
 import PrivateRoute from "./routes/PrivateRoute.jsx";
 

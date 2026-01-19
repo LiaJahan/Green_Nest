@@ -10,7 +10,7 @@ const Footer = () => {
 
             </nav>
             <nav>
-                <div className="grid grid-flow-col gap-8 text-green-800 text-4xl">
+                <div className="grid grid-flow-col gap-8 text-4xl">
                     <i className="fa-brands fa-square-instagram"></i>
                     <i className="fa-brands fa-square-facebook"></i>
                     <i className="fa-brands fa-square-pinterest"></i>

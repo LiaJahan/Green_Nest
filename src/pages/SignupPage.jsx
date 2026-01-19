@@ -5,15 +5,12 @@ import { toast } from "react-hot-toast";
 
 const SignupPage = () => {
   const { createUser, updateUserProfile, googleLogin } = useAuth();
-
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
-
   const navigate = useNavigate();
-
   const validatePassword = () => {
     if (password.length < 6) return "Password must be at least 6 characters.";
     if (!/[A-Z]/.test(password)) return "Must contain one uppercase letter.";
@@ -26,22 +23,28 @@ const SignupPage = () => {
     const error = validatePassword();
     if (error) return toast.error(error);
 
-    try {
+    try
+    {
       await createUser(email, password);
       await updateUserProfile(name, photo);
       toast.success("Account created!");
       navigate("/");
-    } catch (err) {
+    }
+    catch (err)
+    {
       toast.error(err.message);
     }
   };
 
   const handleGoogle = async () => {
-    try {
+    try
+    {
       await googleLogin();
       toast.success("Account created with Google!");
       navigate("/");
-    } catch (err) {
+    }
+    catch (err)
+    {
       toast.error(err.message);
     }
   };
@@ -50,9 +53,9 @@ const SignupPage = () => {
     <div className="flex justify-center mt-20 px-4">
       <form
         onSubmit={handleSignup}
-        className="card w-full max-w-sm bg-base-200 p-6 shadow-xl space-y-4"
+        className="card w-full max-w-sm bg-green-50 p-6 shadow-xl space-y-4 mb-15"
       >
-        <h1 className="text-3xl font-bold text-center text-green-700">Register</h1>
+        <h1 className="text-3xl font-bold text-center ">Register</h1>
         <input
           type="text"
           className="input input-bordered w-full"
@@ -102,7 +105,7 @@ const SignupPage = () => {
         </button>
         <p className="text-center">
           Already have an account?{" "}
-          <Link to="/login" className="text-green-700 font-semibold underline">
+          <Link to="/login" className=" font-semibold underline">
             Login
           </Link>
         </p>

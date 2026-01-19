@@ -10,38 +10,49 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
-
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e) =>
+    {
     e.preventDefault();
-    try {
+    try
+    {
       await loginUser(email, password);
       toast.success("Logged in successfully!");
       navigate(from, { replace: true });
-    } catch (err) {
+    }
+    catch (err)
+    {
       toast.error(err.message);
     }
   };
 
-  const handleForgotPassword = async () => {
+  const handleForgotPassword = async () =>
+    {
     if (!email) return toast.error("Enter your email first!");
-    try {
+    try
+    {
       await sendPasswordResetEmail(auth, email);
       toast.success("Password reset link sent!");
-    } catch (err) {
+    }
+    catch (err)
+    {
       toast.error(err.message);
     }
   };
 
-  const handleGoogle = async () => {
-    try {
+  const handleGoogle = async () =>
+    {
+    try
+    {
       await googleLogin();
       toast.success("Logged in with Google!");
       navigate(from, { replace: true });
-    } catch (err) {
+    }
+    catch (err)
+    {
       toast.error(err.message);
     }
   };
@@ -50,9 +61,9 @@ const LoginPage = () => {
     <div className="flex justify-center mt-20 px-4">
       <form
         onSubmit={handleLogin}
-        className="card w-full max-w-sm bg-base-200 p-6 shadow-xl space-y-4"
+        className="card w-full max-w-sm bg-green-50 p-6 shadow-xl space-y-4 mb-20"
       >
-        <h1 className="text-3xl font-bold text-center text-green-700">Login</h1>
+        <h1 className="text-3xl font-bold text-center">Login</h1>
         <input
           type="email"
           className="input input-bordered w-full"
@@ -82,7 +93,7 @@ const LoginPage = () => {
           </span>
         </div>
         <p
-          className="text-sm text-green-600 cursor-pointer hover:underline"
+          className="text-sm cursor-pointer hover:underline"
           onClick={handleForgotPassword}
         >
           Forgot Password?
@@ -97,7 +108,7 @@ const LoginPage = () => {
         </button>
         <p className="text-center">
           Don’t have an account?{" "}
-          <Link to="/signup" className="text-green-700 font-semibold underline">
+          <Link to="/signup" className="font-semibold underline">
             Register here
           </Link>
         </p>

@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="dropdown">
           <button onClick={() => setIsOpen(!isOpen)} className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16"/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </button>
           {isOpen && (
@@ -30,9 +30,9 @@ const Navbar = () => {
 
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-xl font-bold">
-          <li><NavLink to="/" className={({isActive}) => `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`}>Home</NavLink></li>
-          <li><NavLink to="/plants" className={({isActive}) => `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`}>Plants</NavLink></li>
-          <li><NavLink to="/myprofile" className={({isActive}) => `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`}>My Profile</NavLink></li>
+          <li><NavLink to="/" className={({ isActive }) => `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`}>Home</NavLink></li>
+          <li><NavLink to="/plants" className={({ isActive }) => `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`}>Plants</NavLink></li>
+          <li><NavLink to="/myprofile" className={({ isActive }) => `px-3 py-1 ${isActive ? "!text-amber-500" : "text-green-800"}`}>My Profile</NavLink></li>
         </ul>
       </div>
 
@@ -47,7 +47,7 @@ const Navbar = () => {
             <label tabIndex={0} className="btn btn-ghost">
               <div className="avatar">
                 <div className="w-10 rounded-full">
-                  <img src={user.photoURL || "https://i.pravatar.cc/150"} alt="User Avatar"/>
+                  <img src={user.photoURL || "https://i.pravatar.cc/150"} alt="User Avatar" />
                 </div>
               </div>
             </label>

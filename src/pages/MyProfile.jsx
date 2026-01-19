@@ -1,21 +1,21 @@
-// src/pages/MyProfile.jsx
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
 
 const MyProfile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
-
   const [name, setName] = useState(user?.displayName || "");
   const [photo, setPhoto] = useState(user?.photoURL || "");
-
   const handleUpdate = async (e) => {
     e.preventDefault();
 
-    try {
+    try
+    {
       await updateUserProfile(name, photo);
       toast.success("Profile updated successfully!");
-    } catch (error) {
+    }
+    catch (error)
+    {
       toast.error(error.message);
     }
   };

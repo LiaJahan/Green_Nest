@@ -12,7 +12,7 @@ import { auth } from "../firebase";
 
 export const AuthContext = createContext();
 
-// Custom hook
+
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
@@ -41,25 +41,20 @@ export const AuthProvider = ({ children }) => {
   const logOut = () => signOut(auth);
 
   return (
-    // <AuthContext.Provider
-    //   value={{ user, createUser, loginUser, googleLogin, updateUserProfile, logOut }}
-    // >
-    //   {!loading && children}
-    // </AuthContext.Provider>
 
     <AuthContext.Provider
-  value={{
-    user,
-    loading,
-    createUser,
-    loginUser,
-    googleLogin,
-    updateUserProfile,
-    logOut,
-  }}
->
-  {!loading && children}
-</AuthContext.Provider>
+      value={{
+        user,
+        loading,
+        createUser,
+        loginUser,
+        googleLogin,
+        updateUserProfile,
+        logOut,
+      }}
+    >
+      {!loading && children}
+    </AuthContext.Provider>
 
   );
 };
